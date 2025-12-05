@@ -1,0 +1,115 @@
+:root {
+  --color-text-primary: hsl(218, 44%, 22%);
+  --color-text-secondary: hsl(216, 15%, 48%);
+  --color-background-card: hsl(0, 0%, 100%);
+  --color-background-page: hsl(212, 45%, 89%);
+
+  /* Typography */
+  --font-family-primary: 'Outfit', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-body: 15px;
+  --font-size-heading: 22px;
+  --line-height-body: 1.4;
+  --line-height-heading: 1.2;
+  --letter-spacing-body: 0.2px;
+
+  /* Spacing */
+  --spacing-small: 16px;
+  --spacing-medium: 24px;
+  --spacing-large: 40px;
+
+  /* Radius */
+  --border-radius-small: 10px;
+  --border-radius-large: 20px;
+
+  /* Layout */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smo;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-page);
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: 0 var(--spacing-small);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.qr-card {
+  max-width: 320px;
+  width: 100%;
+  background-color: var(--color-background-card);
+  padding: var(--spacing-small);
+  padding-bottom: var(--spacing-large);
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.0477);
+}
+
+.qr-card__image-section {
+  margin-bottom: var(--spacing-medium);
+}
+
+.qr-card__image-wrapper img {
+  border-radius: var(--border-radius-small);
+}
+
+.qr-card__content {
+  text-align: center;
+  padding: 0 var(--spacing-small);
+}
+
+.qr-card__title {
+  font-size: var(--font-size-heading);
+  margin-bottom: var(--spacing-small);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.qr-card__description {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--letter-spacing-body);
+  font-weight: var(--font-weight-regular);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
